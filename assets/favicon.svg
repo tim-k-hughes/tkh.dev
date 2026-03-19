@@ -2,15 +2,15 @@
   <title>tkh.dev favicon</title>
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#111629" />
-      <stop offset="100%" stop-color="#33405f" />
+      <stop offset="0%" stop-color="#902923" />
+      <stop offset="100%" stop-color="#198ab3" />
     </linearGradient>
     <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#d06b42" />
-      <stop offset="100%" stop-color="#0f7d77" />
+      <stop offset="0%" stop-color="#4aaaf4" />
+      <stop offset="100%" stop-color="#c76449" />
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="18" fill="url(#bg)" />
   <path d="M14 15h36v6H34v28h-6V21H14z" fill="url(#glow)" />
-  <path d="M38 21h12v6h-6v22h-6z" fill="#f7f1e5" opacity="0.94" />
+  <path d="M38 21h12v6h-6v22h-6z" fill="#ffd998" opacity="0.94" />
 </svg>
