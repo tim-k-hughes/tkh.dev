@@ -574,11 +574,22 @@ h3 {
   align-items: start;
 }
 
+.writing-layout {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.36fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
 .sticky-panel {
   position: sticky;
   top: 7rem;
   display: grid;
   gap: 0.95rem;
+}
+
+.writing-sidebar {
+  min-height: 100%;
 }
 
 .stacked-links {
@@ -589,6 +600,96 @@ h3 {
 .timeline {
   display: grid;
   gap: 1rem;
+}
+
+.writing-stream {
+  display: grid;
+  gap: 1rem;
+}
+
+.note-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.note-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.note-index {
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(17, 22, 41, 0.96), rgba(40, 51, 80, 0.92));
+  color: #fbf7ef;
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.note-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.note-type,
+.note-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.note-type {
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--muted);
+}
+
+.note-status {
+  background: var(--accent-soft);
+  border-color: rgba(208, 107, 66, 0.24);
+  color: var(--accent);
+}
+
+.note-copy {
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.note-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.note-detail {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.note-detail-label {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-2);
 }
 
 .detail-list {
@@ -640,7 +741,8 @@ button:focus-visible {
   .hero,
   .split-panel,
   .contact-band,
-  .experience-layout {
+  .experience-layout,
+  .writing-layout {
     grid-template-columns: 1fr;
   }
 
@@ -689,6 +791,16 @@ button:focus-visible {
   .split-panel {
     padding: 1.25rem;
     border-radius: 1.4rem;
+  }
+
+  .note-head,
+  .note-meta {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .note-details {
+    grid-template-columns: 1fr;
   }
 
   h1 {
