@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 560" role="img" aria-labelledby="title desc">
+  <title id="title">tkh.dev logo</title>
+  <desc id="desc">A hand-drawn cat face with a long tail inside an irregular rounded white shape.</desc>
+  <path
+    fill="#fffdf8"
+    d="M111 87C159 53 244 42 327 46c74 4 145 18 181 63 41 51 43 130 41 209-2 80-7 165-58 210-48 42-123 43-198 38-89-5-188-16-235-81C14 429 10 339 16 262c5-65 23-137 95-175Z"
+  />
+  <path
+    fill="none"
+    stroke="#050505"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="33"
+    d="M257 510 246 424c-55-4-96-16-123-40-30-28-43-70-44-151-1-62 8-136 26-187 7-18 22-16 31 2l48 101c4 8 12 14 20 14 36 1 71-1 103-9 10-2 18-11 19-21l15-99c2-16 21-21 33-10 48 43 83 89 108 141 23 49 36 112 31 162-5 50-25 93-67 126l110 163"
+  />
+  <circle cx="222" cy="333" r="18" fill="#050505" />
+  <circle cx="318" cy="312" r="18" fill="#050505" />
+</svg>

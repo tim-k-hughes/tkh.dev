@@ -26,10 +26,14 @@
 
     <header class="site-header">
       <div class="shell header-inner">
-        <a class="brand" href="/" aria-label="Go to homepage">tkh.dev</a>
+        <a class="brand" href="/">
+          <img class="brand-logo" src="/assets/logo.svg" alt="" aria-hidden="true">
+          <span class="visually-hidden">tkh.dev</span>
+        </a>
         <nav class="site-nav" aria-label="Primary">
           <a data-nav href="/">Home</a>
           <a data-nav href="/experience/">Experience</a>
+          <a data-nav href="/photograph/">Photograph</a>
           <a data-nav href="/projects/">Projects</a>
           <a data-nav href="/writing/">Writing</a>
         </nav>
@@ -71,7 +75,9 @@
 
         <div class="hero-stack" data-reveal>
           <article class="panel spotlight-card">
-            <div class="spotlight-mark" aria-hidden="true">TKH</div>
+            <div class="spotlight-mark" aria-hidden="true">
+              <img class="spotlight-logo" src="/assets/logo.svg" alt="">
+            </div>
             <p class="panel-label">Snapshot</p>
             <h2>Operator at the handoff.</h2>
             <ul class="mini-list" aria-label="Where I focus">
@@ -97,6 +103,10 @@
               <a class="route-item" href="/experience/">
                 <span class="route-path">/experience</span>
                 <span class="route-copy">The fuller story behind my career, role by role.</span>
+              </a>
+              <a class="route-item" href="/photograph/">
+                <span class="route-path">/photograph</span>
+                <span class="route-copy">A friendly photo album with uploads, captions, dates, and a built-in gallery view.</span>
               </a>
               <a class="route-item" href="/writing/">
                 <span class="route-path">/writing</span>
@@ -184,6 +194,82 @@
         </div>
       </section>
 
+      <section class="section shell" id="travel-recommendations">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Travel recommendations</p>
+          <h2>Trip shapes I keep recommending.</h2>
+          <p class="section-copy">
+            I like travel that feels deliberate without being over-planned: strong neighborhoods,
+            easy movement, memorable food, and enough open space to actually notice the place you
+            are in. These are the kinds of trips I would point people toward first.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="panel travel-card" data-reveal>
+            <p class="panel-label">Short city trip</p>
+            <h3>Start with one neighborhood, not the whole map.</h3>
+            <p class="travel-copy">
+              The best long weekends usually come from picking a compact base and letting the trip
+              feel lived-in instead of rushed.
+            </p>
+            <ul class="compact-list">
+              <li>Stay somewhere walkable to breakfast, transit, and a late dinner spot.</li>
+              <li>Book one anchor plan each day and leave the rest open.</li>
+              <li>Treat a great neighborhood as the attraction, not just the backdrop.</li>
+            </ul>
+          </article>
+
+          <article class="panel travel-card" data-reveal>
+            <p class="panel-label">First big trip</p>
+            <h3>Choose easy logistics over maximum ambition.</h3>
+            <p class="travel-copy">
+              A strong recommendation should make someone feel confident, not turn every day into a
+              puzzle of transfers, check-ins, and overpacked plans.
+            </p>
+            <ul class="compact-list">
+              <li>Favor direct flights and simple airport-to-hotel transfers.</li>
+              <li>Prioritize places with strong transit and clear neighborhood identities.</li>
+              <li>Build in one fully unplanned day to recover and improvise.</li>
+            </ul>
+          </article>
+
+          <article class="panel travel-card" data-reveal>
+            <p class="panel-label">Reset vacation</p>
+            <h3>Give yourself room to disappear into the routine.</h3>
+            <p class="travel-copy">
+              The trips people remember best are often the ones with fewer stops and more repetition:
+              the same walk, the same coffee order, the same market after dark.
+            </p>
+            <ul class="compact-list">
+              <li>Stay long enough to recognize one daily rhythm.</li>
+              <li>Leave margin for weather, rest, and accidental discoveries.</li>
+              <li>Pick food, parks, and pace before you pick landmarks.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="panel travel-band" data-reveal>
+          <div>
+            <p class="panel-label">What makes the list</p>
+            <h3>Good recommendations reduce friction instead of adding more options.</h3>
+          </div>
+          <div class="travel-band-copy">
+            <p>
+              I am usually optimizing for clarity: where to stay, how to move around, what to do
+              on the first afternoon, and how to keep the trip from feeling like a race.
+            </p>
+            <div class="chip-row" aria-label="Travel principles">
+              <span class="chip">Walkability</span>
+              <span class="chip">Transit</span>
+              <span class="chip">Food</span>
+              <span class="chip">Neighborhood rhythm</span>
+              <span class="chip">Unscheduled time</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section shell">
         <div class="split-panel" data-reveal>
           <div>
@@ -211,7 +297,10 @@
 
     <footer class="site-footer">
       <div class="shell footer-inner">
-        <p>tkh.dev</p>
+        <a class="footer-brand" href="/">
+          <img class="footer-logo" src="/assets/logo.svg" alt="" aria-hidden="true">
+          <span>tkh.dev</span>
+        </a>
         <p>Built as a flexible personal homepage for career, writing, and project paths.</p>
         <p>&copy; <span data-year></span> Timothy Hughes</p>
       </div>
