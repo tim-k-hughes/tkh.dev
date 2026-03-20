@@ -195,14 +195,6 @@ ul {
 
 .brand-logo {
   width: clamp(3.4rem, 7vw, 4.8rem);
-  filter: drop-shadow(0 10px 20px rgba(49, 25, 24, 0.12));
-  transition: transform 180ms ease, filter 180ms ease;
-}
-
-.brand:hover .brand-logo,
-.brand:focus-visible .brand-logo {
-  transform: translateY(-1px);
-  filter: drop-shadow(0 14px 24px rgba(49, 25, 24, 0.16));
 }
 
 .site-nav {
@@ -434,7 +426,6 @@ h3 {
 
 .spotlight-mark {
   width: clamp(5.8rem, 16vw, 7.4rem);
-  filter: drop-shadow(0 18px 30px rgba(49, 25, 24, 0.16));
 }
 
 .chip-row {
@@ -639,7 +630,6 @@ h3 {
 
 .footer-logo {
   width: 2.75rem;
-  filter: drop-shadow(0 12px 18px rgba(49, 25, 24, 0.1));
 }
 
 .subhero {
@@ -1198,7 +1188,6 @@ h3 {
 .error-brand {
   width: min(6.5rem, 36vw);
   justify-self: center;
-  filter: drop-shadow(0 20px 32px rgba(49, 25, 24, 0.14));
 }
 
 [data-reveal] {
