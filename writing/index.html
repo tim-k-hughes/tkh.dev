@@ -9,11 +9,11 @@
       content="Field notes on onboarding, escalations, support systems, analytics, and product-aware operations."
     >
     <meta name="theme-color" content="#902923">
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:wght@200..800&amp;family=Space+Grotesk:wght@400;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="/styles.css">
@@ -27,268 +27,149 @@
     <header class="site-header">
       <div class="shell header-inner">
         <a class="brand" href="/">
-          <img class="brand-logo" src="/assets/logo.svg" alt="" aria-hidden="true">
-          <span class="visually-hidden">tkh.dev</span>
+          <img class="brand-logo" src="/assets/logo-red.png" alt="" aria-hidden="true">
+          <span class="brand-wordmark">tkh.dev</span>
         </a>
         <nav class="site-nav" aria-label="Primary">
           <a data-nav href="/">Home</a>
           <a data-nav href="/experience/">Experience</a>
-          <a data-nav href="/photograph/">Photograph</a>
-          <a data-nav href="/projects/">Projects</a>
           <a data-nav href="/writing/">Writing</a>
+          <a data-nav href="/projects/">Projects</a>
+          <a data-nav href="/photograph/">Photography</a>
         </nav>
-        <a class="nav-cta" href="mailto:tk.hughes51@gmail.com">Get in touch</a>
+        <div class="header-actions">
+          <a class="icon-button" href="mailto:tk.hughes51@gmail.com">
+            <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+            <span class="visually-hidden">Email Timothy Hughes</span>
+          </a>
+          <a class="header-badge" href="https://www.linkedin.com/in/tkhughes" target="_blank" rel="noreferrer">
+            <img src="/assets/logo-red.png" alt="" aria-hidden="true">
+            <span class="visually-hidden">LinkedIn profile</span>
+          </a>
+        </div>
       </div>
     </header>
 
     <main id="content">
-      <section class="section shell subhero">
-        <div data-reveal>
-          <p class="eyebrow">Writing</p>
-          <h1>Field notes from the handoff.</h1>
+      <section class="section shell writing-hero">
+        <div class="page-intro" data-reveal>
+          <p class="eyebrow">The archive</p>
+          <h1>Operating notes &amp; <span class="accent-word">quiet reflections.</span></h1>
           <p class="lead">
-            Writing about onboarding, escalations, support systems, analytics, and the operational
-            layer where customers either gain confidence or start to drift.
+            An editorial index of practical essays, tactical playbooks, and shorter operating notes
+            on onboarding, escalations, support systems, analytics, and leadership inside customer
+            operations.
           </p>
         </div>
 
-        <div class="summary-strip" data-reveal>
-          <div class="summary-item">
-            <span class="summary-label">Angle</span>
-            <strong>Operator-first writing pulled from real implementation work.</strong>
-          </div>
-          <div class="summary-item">
-            <span class="summary-label">Formats</span>
-            <strong>Essays, breakdowns, playbooks, and shorter operating notes.</strong>
-          </div>
-          <div class="summary-item">
-            <span class="summary-label">Use</span>
-            <strong>Practical ideas another team could borrow without translation.</strong>
-          </div>
+        <div class="filter-row" data-reveal aria-label="Writing filters">
+          <button class="filter-pill" type="button" data-note-filter="all" data-selected="true" aria-pressed="true">All notes</button>
+          <button class="filter-pill" type="button" data-note-filter="essay" aria-pressed="false">Essays</button>
+          <button class="filter-pill" type="button" data-note-filter="playbook" aria-pressed="false">Playbooks</button>
+          <button class="filter-pill" type="button" data-note-filter="operating-note" aria-pressed="false">Operating notes</button>
         </div>
       </section>
 
       <section class="section shell">
-        <div class="split-panel" data-reveal>
-          <div>
-            <p class="eyebrow">Editorial direction</p>
-            <h2>Writing that stays close to the messy part of the work.</h2>
-          </div>
-          <div>
-            <p>
-              The interesting part is rarely the generic best practice. It is the handoff with blurry
-              ownership, the escalation that reveals a weak system, the dashboard nobody trusts, and
-              the process change that quietly fixes all three.
-            </p>
-            <a class="text-link" href="#featured-notes">Browse the planned note stack</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section shell writing-layout">
-        <aside data-reveal>
-          <div class="panel sticky-panel writing-sidebar">
-            <p class="panel-label">Editorial map</p>
-            <h2>The themes underneath the page</h2>
-            <ul class="compact-list">
-              <li>Onboarding design and implementation pacing</li>
-              <li>Escalation systems built before the emergency</li>
-              <li>Support-to-product feedback loops that survive scale</li>
-              <li>Analytics and reporting that teams actually trust</li>
-              <li>Leadership inside customer-facing operations</li>
-            </ul>
-            <div class="stacked-links">
-              <a class="text-link" href="#featured-notes">Planned notes</a>
-              <a class="text-link" href="#formats">Formats this section supports</a>
-              <a class="text-link" href="mailto:tk.hughes51@gmail.com">Suggest a topic</a>
-            </div>
-          </div>
-        </aside>
-
-        <div class="writing-stream" id="featured-notes">
-          <article class="panel note-card" data-reveal>
-            <div class="note-head">
-              <span class="note-index" aria-hidden="true">01</span>
-              <div class="note-meta">
-                <span class="note-type">Essay draft</span>
-                <span class="note-status">In progress</span>
+        <div class="writing-shelf">
+          <article class="note-card" data-reveal data-note-kind="essay">
+            <div class="note-media note-media-handoff">
+              <div class="note-badges">
+                <span class="note-badge">Essay</span>
+                <span class="note-badge note-badge-status">Drafting</span>
               </div>
+              <span class="note-media-icon material-symbols-outlined" aria-hidden="true">device_hub</span>
             </div>
             <h2>What a clean implementation handoff actually needs</h2>
-            <p class="note-copy">
+            <p class="note-summary">
               A practical look at where momentum gets lost between sales, implementation, support,
               and the customer, plus the signals that keep a rollout healthy.
             </p>
-            <div class="note-details">
-              <div class="note-detail">
-                <span class="note-detail-label">Focus</span>
-                <p>Ownership, kickoff design, timelines, and early risk flags.</p>
-              </div>
-              <div class="note-detail">
-                <span class="note-detail-label">Why it matters</span>
-                <p>Most onboarding pain starts before the project officially begins.</p>
-              </div>
+            <div class="note-meta-row">
+              <span class="note-date">In progress</span>
+              <span class="note-link">Drafting now</span>
             </div>
           </article>
 
-          <article class="panel note-card" data-reveal>
-            <div class="note-head">
-              <span class="note-index" aria-hidden="true">02</span>
-              <div class="note-meta">
-                <span class="note-type">Breakdown</span>
-                <span class="note-status">Outlined</span>
+          <article class="note-card" data-reveal data-note-kind="playbook">
+            <div class="note-media note-media-escalation">
+              <div class="note-badges">
+                <span class="note-badge">Playbook</span>
+                <span class="note-badge note-badge-status">Planned</span>
               </div>
+              <span class="note-media-icon material-symbols-outlined" aria-hidden="true">edit_note</span>
             </div>
             <h2>The escalation playbook I wish more teams wrote before they needed it</h2>
-            <p class="note-copy">
-              A step-by-step breakdown of roles, updates, internal communication, and customer trust
-              during high-pressure moments.
+            <p class="note-summary">
+              A step-by-step breakdown of response ownership, update rhythms, internal communication,
+              and customer trust during high-pressure moments.
             </p>
-            <div class="note-details">
-              <div class="note-detail">
-                <span class="note-detail-label">Focus</span>
-                <p>Response ownership, status rhythms, decision logs, and recovery framing.</p>
-              </div>
-              <div class="note-detail">
-                <span class="note-detail-label">Why it matters</span>
-                <p>Escalations expose the quality of the system underneath the team.</p>
-              </div>
+            <div class="note-meta-row">
+              <span class="note-date">Outlined</span>
+              <span class="note-link">On the list</span>
             </div>
           </article>
 
-          <article class="panel note-card" data-reveal>
-            <div class="note-head">
-              <span class="note-index" aria-hidden="true">03</span>
-              <div class="note-meta">
-                <span class="note-type">Field guide</span>
-                <span class="note-status">Queued</span>
+          <article class="note-card" data-reveal data-note-kind="essay">
+            <div class="note-media note-media-feedback">
+              <div class="note-badges">
+                <span class="note-badge">Essay</span>
+                <span class="note-badge note-badge-status">Planned</span>
               </div>
+              <span class="note-media-icon material-symbols-outlined" aria-hidden="true">sync_alt</span>
             </div>
             <h2>Support-to-product feedback loops that do not die in a spreadsheet</h2>
-            <p class="note-copy">
+            <p class="note-summary">
               Notes on turning repeated support pain into sharper product context without burying the
               signal in a backlog nobody revisits.
             </p>
-            <div class="note-details">
-              <div class="note-detail">
-                <span class="note-detail-label">Focus</span>
-                <p>Tagging, narrative context, pattern quality, and handoff structure.</p>
-              </div>
-              <div class="note-detail">
-                <span class="note-detail-label">Why it matters</span>
-                <p>Teams improve faster when frontline details move upstream cleanly.</p>
-              </div>
+            <div class="note-meta-row">
+              <span class="note-date">Queued</span>
+              <span class="note-link">Roadmap note</span>
             </div>
           </article>
 
-          <article class="panel note-card" data-reveal>
-            <div class="note-head">
-              <span class="note-index" aria-hidden="true">04</span>
-              <div class="note-meta">
-                <span class="note-type">Operating note</span>
-                <span class="note-status">Queued</span>
+          <article class="note-card note-card-wide" data-reveal data-note-kind="operating-note">
+            <div class="note-media note-media-metrics">
+              <div class="note-badges">
+                <span class="note-badge">Operating note</span>
+                <span class="note-badge note-badge-status">Planned</span>
               </div>
+              <span class="note-media-icon material-symbols-outlined" aria-hidden="true">inventory_2</span>
             </div>
             <h2>Why onboarding metrics fail when the ownership model is fuzzy</h2>
-            <p class="note-copy">
+            <p class="note-quote">
+              “Metrics become noise when nobody is clearly responsible for the next move.”
+            </p>
+            <p class="note-summary">
               A shorter note on the difference between tracking motion and tracking confidence, plus
-              the ownership questions that make a dashboard useful.
+              the ownership questions that make a dashboard useful in the first place.
             </p>
-            <div class="note-details">
-              <div class="note-detail">
-                <span class="note-detail-label">Focus</span>
-                <p>Milestones, adoption signals, shared definitions, and reporting hygiene.</p>
-              </div>
-              <div class="note-detail">
-                <span class="note-detail-label">Why it matters</span>
-                <p>Metrics become noise when nobody is clearly responsible for the next move.</p>
-              </div>
+            <div class="note-meta-row">
+              <span class="note-date">Queued</span>
+              <a class="note-link" href="mailto:tk.hughes51@gmail.com?subject=Writing%20topic%20request">Suggest this one</a>
             </div>
           </article>
-        </div>
-      </section>
-
-      <section class="section shell" id="formats">
-        <div class="section-heading" data-reveal>
-          <p class="eyebrow">Formats</p>
-          <h2>Different shapes for different kinds of useful notes.</h2>
-          <p class="section-copy">
-            Not everything needs the same structure, so the section is designed to hold a few types
-            of writing without turning into a generic blog feed.
-          </p>
-        </div>
-
-        <div class="card-grid">
-          <article class="panel principle-card" data-reveal>
-            <p class="panel-label">Short essay</p>
-            <h3>A point of view with operational teeth</h3>
-            <p>Best when a repeated pattern deserves a sharper argument and a clear takeaway.</p>
-          </article>
-          <article class="panel principle-card" data-reveal>
-            <p class="panel-label">Breakdown</p>
-            <h3>The annotated playbook</h3>
-            <p>Useful for showing how a workflow, escalation path, or reporting system is actually built.</p>
-          </article>
-          <article class="panel principle-card" data-reveal>
-            <p class="panel-label">Operating note</p>
-            <h3>The small thing worth remembering</h3>
-            <p>Shorter entries for heuristics, mistakes, and practical observations that help in the next meeting.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section shell">
-        <div class="card-grid card-grid-large">
-          <article class="panel route-card" data-reveal>
-            <p class="panel-label">Publishing principle</p>
-            <h2>Fewer posts, sharper posts.</h2>
-            <p class="route-copy">
-              This section works better as a shelf of durable notes than a feed of filler.
-            </p>
-            <ul class="mini-list">
-              <li>Publish when there is a real lesson, not just activity.</li>
-              <li>Stay specific enough that another team could borrow the idea.</li>
-              <li>Let longer essays earn their own stable routes later.</li>
-            </ul>
-          </article>
-
-          <article class="panel route-card" data-reveal>
-            <p class="panel-label">What comes next</p>
-            <h2>An index now, standalone essays soon.</h2>
-            <p class="route-copy">
-              The page is ready to surface featured notes first, then grow into permanent essay paths
-              once the first pieces are ready to publish.
-            </p>
-            <div class="chip-row" aria-label="Planned destinations">
-              <span class="chip">/writing</span>
-              <span class="chip">/writing/handoffs</span>
-              <span class="chip">/writing/escalations</span>
-              <span class="chip">/writing/onboarding-metrics</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section shell contact-band" data-reveal>
-        <div>
-          <p class="eyebrow">Talk writing</p>
-          <h2>If one of these topics would be useful sooner, I can prioritize it.</h2>
-        </div>
-        <div class="contact-actions">
-          <a class="button button-primary" href="mailto:tk.hughes51@gmail.com">Suggest a topic</a>
-          <a class="button button-secondary" href="https://www.linkedin.com/in/tkhughes" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="shell footer-inner">
-        <a class="footer-brand" href="/">
-          <img class="footer-logo" src="/assets/logo.svg" alt="" aria-hidden="true">
-          <span>tkh.dev</span>
-        </a>
-        <p>Writing index for field notes, essays, and operating breakdowns.</p>
-        <p>&copy; <span data-year></span> Timothy Hughes</p>
+        <div class="footer-copy">
+          <a class="footer-brand" href="/">
+            <img class="footer-logo" src="/assets/logo-red.png" alt="" aria-hidden="true">
+            <span>tkh.dev</span>
+          </a>
+          <p>Editorial archive for tactical essays, playbooks, and quieter operating notes.</p>
+          <p>&copy; <span data-year></span> Timothy Hughes</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/tkhughes" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/tim-k-hughes" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://github.com/tim-k-hughes/tkh.dev" target="_blank" rel="noreferrer">Source</a>
+        </div>
       </div>
     </footer>
   </body>

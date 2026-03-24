@@ -41,6 +41,45 @@ const revealSections = () => {
   elements.forEach((element) => observer.observe(element));
 };
 
+const initWritingFilters = () => {
+  const buttons = Array.from(document.querySelectorAll("[data-note-filter]"));
+  const notes = Array.from(document.querySelectorAll("[data-note-kind]"));
+
+  if (!buttons.length || !notes.length) {
+    return;
+  }
+
+  const applyFilter = (filter, revealMatches = true) => {
+    buttons.forEach((button) => {
+      const isSelected = button.dataset.noteFilter === filter;
+
+      button.dataset.selected = String(isSelected);
+      button.setAttribute("aria-pressed", String(isSelected));
+    });
+
+    notes.forEach((note) => {
+      const matches = filter === "all" || note.dataset.noteKind === filter;
+
+      note.hidden = !matches;
+
+      if (matches && revealMatches) {
+        note.classList.add("is-visible");
+      }
+    });
+  };
+
+  const initialFilter =
+    buttons.find((button) => button.dataset.selected === "true")?.dataset.noteFilter ?? "all";
+
+  applyFilter(initialFilter, false);
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      applyFilter(button.dataset.noteFilter ?? "all");
+    });
+  });
+};
+
 const photographStorageKey = "tkh.photograph.album.v1";
 
 const createTodayValue = () => {
@@ -547,4 +586,5 @@ const initPhotographExperience = () => {
 setCurrentYear();
 setActiveNav();
 revealSections();
+initWritingFilters();
 initPhotographExperience();

@@ -9,11 +9,11 @@
       content="Project paths for tkh.dev. A route-first structure for future builds, demos, and experiments."
     >
     <meta name="theme-color" content="#902923">
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:wght@200..800&amp;family=Space+Grotesk:wght@400;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="/styles.css">
@@ -27,59 +27,131 @@
     <header class="site-header">
       <div class="shell header-inner">
         <a class="brand" href="/">
-          <img class="brand-logo" src="/assets/logo.svg" alt="" aria-hidden="true">
-          <span class="visually-hidden">tkh.dev</span>
+          <img class="brand-logo" src="/assets/logo-red.png" alt="" aria-hidden="true">
+          <span class="brand-wordmark">tkh.dev</span>
         </a>
         <nav class="site-nav" aria-label="Primary">
           <a data-nav href="/">Home</a>
           <a data-nav href="/experience/">Experience</a>
-          <a data-nav href="/photograph/">Photograph</a>
-          <a data-nav href="/projects/">Projects</a>
           <a data-nav href="/writing/">Writing</a>
+          <a data-nav href="/projects/">Projects</a>
+          <a data-nav href="/photograph/">Photography</a>
         </nav>
-        <a class="nav-cta" href="mailto:tk.hughes51@gmail.com">Get in touch</a>
+        <div class="header-actions">
+          <a class="icon-button" href="mailto:tk.hughes51@gmail.com">
+            <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+            <span class="visually-hidden">Email Timothy Hughes</span>
+          </a>
+          <a class="header-badge" href="https://www.linkedin.com/in/tkhughes" target="_blank" rel="noreferrer">
+            <img src="/assets/logo-red.png" alt="" aria-hidden="true">
+            <span class="visually-hidden">LinkedIn profile</span>
+          </a>
+        </div>
       </div>
     </header>
 
     <main id="content">
-      <section class="section shell subhero">
-        <div data-reveal>
+      <section class="section shell projects-hero">
+        <div class="page-intro" data-reveal>
           <p class="eyebrow">Projects</p>
-          <h1>A home for the things that should live on their own path.</h1>
+          <h1>Current <span class="accent-word">builds</span> &amp; experiments.</h1>
           <p class="lead">
-            This page is intentionally light right now. The point is to make space for future work
-            to be hosted cleanly at `tkh.dev/project-slug/`, `tkh.dev/tools/`, or any other route we
-            want to stand up next.
+            This route is a scaffold for future tools, demos, and operational experiments. The cards
+            here describe the kinds of paths this site is ready to support next.
           </p>
         </div>
       </section>
 
       <section class="section shell">
-        <div class="card-grid">
-          <article class="panel principle-card" data-reveal>
-            <h2>What belongs here</h2>
-            <p>Standalone tools, polished case studies, product experiments, and client-facing demos.</p>
+        <div class="project-grid">
+          <article class="project-card project-card-feature" data-reveal>
+            <div>
+              <p class="project-label">Route-ready build</p>
+              <h2>Onboarding automation toolkit</h2>
+              <p>
+                A home for scripts, checklists, and browser-side automation patterns that reduce
+                manual setup and create cleaner customer starts.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Automation</span>
+              <span class="project-tag">Operational tooling</span>
+            </div>
+            <div class="project-art project-art-flow" aria-hidden="true"></div>
           </article>
-          <article class="panel principle-card" data-reveal>
-            <h2>Suggested path pattern</h2>
-            <p>Keep each project in its own folder so hosting on separate page paths stays simple and predictable.</p>
+
+          <article class="project-card project-card-compact" data-reveal>
+            <div>
+              <p class="project-label">Exploration</p>
+              <h3>Escalation response kit</h3>
+              <p>
+                Templates, status rhythms, and decision-log patterns for urgent customer situations
+                that need structure before they need speed.
+              </p>
+            </div>
+            <div class="project-art project-art-dashboard" aria-hidden="true"></div>
           </article>
-          <article class="panel principle-card" data-reveal>
-            <h2>Next obvious move</h2>
-            <p>Ship the first project card here as soon as you want a build to have a permanent home.</p>
+
+          <article class="project-card project-card-compact" data-reveal>
+            <div>
+              <p class="project-label">Route system</p>
+              <h3>Essay and case-study templates</h3>
+              <p>
+                Static route patterns for long-form writing, project case studies, and publishable
+                notes that deserve permanent paths of their own.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">Route-first</span>
+            </div>
           </article>
+
+          <article class="project-card project-card-wide" data-reveal>
+            <div>
+              <p class="project-label">Photography extensions</p>
+              <h3>Archive tools for the local photo lab</h3>
+              <p>
+                Future improvements for the photography route, including collections, metadata
+                sorting, richer archive views, and cleaner featured-image controls.
+              </p>
+            </div>
+            <div class="project-art project-art-photo" aria-hidden="true"></div>
+          </article>
+        </div>
+
+        <div class="collab-band" data-reveal>
+          <h2>Open for collaboration</h2>
+          <p>
+            If one of these paths sounds useful to build out together, I’m happy to talk through the
+            technical shape, product angle, or operational detail behind it.
+          </p>
+          <div class="collab-actions">
+            <a class="button button-primary" href="mailto:tk.hughes51@gmail.com">Get in touch</a>
+            <a class="button button-secondary" href="https://github.com/tim-k-hughes/tkh.dev" target="_blank" rel="noreferrer">View repository</a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="shell footer-inner">
-        <a class="footer-brand" href="/">
-          <img class="footer-logo" src="/assets/logo.svg" alt="" aria-hidden="true">
-          <span>tkh.dev</span>
-        </a>
-        <p>Projects route scaffolded and ready for future builds.</p>
-        <p>&copy; <span data-year></span> Timothy Hughes</p>
+        <div class="footer-copy">
+          <a class="footer-brand" href="/">
+            <img class="footer-logo" src="/assets/logo-red.png" alt="" aria-hidden="true">
+            <span>tkh.dev</span>
+          </a>
+          <p>Project route for future builds, experiments, and collaborative tools.</p>
+          <p>&copy; <span data-year></span> Timothy Hughes</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/tkhughes" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/tim-k-hughes" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://github.com/tim-k-hughes/tkh.dev" target="_blank" rel="noreferrer">Source</a>
+        </div>
       </div>
     </footer>
   </body>

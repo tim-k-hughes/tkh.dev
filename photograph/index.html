@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Photograph | tkh.dev</title>
+    <title>Photography | tkh.dev</title>
     <meta
       name="description"
-      content="A friendly photograph section for uploading photos, adding captions and dates, and browsing them in an album view."
+      content="A friendly photograph section for uploading photos, adding captions and dates, and browsing them in a local album view."
     >
     <meta name="theme-color" content="#902923">
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:wght@200..800&amp;family=Space+Grotesk:wght@400;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="/styles.css">
@@ -27,165 +27,179 @@
     <header class="site-header">
       <div class="shell header-inner">
         <a class="brand" href="/">
-          <img class="brand-logo" src="/assets/logo.svg" alt="" aria-hidden="true">
-          <span class="visually-hidden">tkh.dev</span>
+          <img class="brand-logo" src="/assets/logo-red.png" alt="" aria-hidden="true">
+          <span class="brand-wordmark">tkh.dev</span>
         </a>
         <nav class="site-nav" aria-label="Primary">
           <a data-nav href="/">Home</a>
           <a data-nav href="/experience/">Experience</a>
-          <a data-nav href="/photograph/">Photograph</a>
-          <a data-nav href="/projects/">Projects</a>
           <a data-nav href="/writing/">Writing</a>
+          <a data-nav href="/projects/">Projects</a>
+          <a data-nav href="/photograph/">Photography</a>
         </nav>
-        <a class="nav-cta" href="mailto:tk.hughes51@gmail.com">Get in touch</a>
+        <div class="header-actions">
+          <a class="icon-button" href="mailto:tk.hughes51@gmail.com">
+            <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+            <span class="visually-hidden">Email Timothy Hughes</span>
+          </a>
+          <a class="header-badge" href="https://www.linkedin.com/in/tkhughes" target="_blank" rel="noreferrer">
+            <img src="/assets/logo-red.png" alt="" aria-hidden="true">
+            <span class="visually-hidden">LinkedIn profile</span>
+          </a>
+        </div>
       </div>
     </header>
 
-    <main id="content">
-      <section class="section shell subhero">
-        <div data-reveal>
-          <p class="eyebrow">Photograph</p>
-          <h1>A friendly place to upload, caption, date, and browse your photos.</h1>
-          <p class="lead">
-            Add a photograph in one pass, then browse it in a built-in album view with a featured
-            image area and a clean thumbnail wall underneath.
-          </p>
+    <main id="content" data-photo-app>
+      <section class="section shell photo-hero">
+        <div class="photo-hero-head" data-reveal>
+          <div class="page-intro">
+            <p class="eyebrow">Selected works</p>
+            <h1>Moments in <span class="accent-word">stillness.</span></h1>
+            <p class="lead">
+              A lightweight photo route for uploading images, adding captions and dates, and browsing
+              them in a local archive without needing a backend.
+            </p>
+          </div>
+
+          <div class="photo-hero-actions">
+            <a class="button button-secondary" href="#photo-wall">Archive</a>
+            <a class="button button-primary" href="#share-a-view">Share a view</a>
+          </div>
         </div>
 
-        <div class="summary-strip" data-reveal>
-          <div class="summary-item">
-            <span class="summary-label">Upload</span>
-            <strong>Drag in a file or choose one from your device, then preview it before you save.</strong>
+        <article class="album-stage" data-reveal>
+          <div class="album-stage-head">
+            <div>
+              <p class="panel-kicker">Featured capture</p>
+              <h2>Browse the archive without losing the details.</h2>
+            </div>
+
+            <div class="album-count" aria-label="Saved photo count">
+              <span class="album-count-number" data-photo-count>0</span>
+              <span class="album-count-label">Saved locally</span>
+            </div>
           </div>
-          <div class="summary-item">
-            <span class="summary-label">Organize</span>
-            <strong>Each photo keeps its own caption and date so the album stays easy to scan later.</strong>
+
+          <div class="album-feature is-empty" data-photo-feature>
+            <div class="album-feature-media">
+              <img class="album-feature-image" data-feature-image alt="" hidden>
+              <div class="album-feature-placeholder" data-feature-placeholder>
+                <p>Nothing in the archive yet.</p>
+                <p>Upload the first photograph below and it will become the featured image automatically.</p>
+              </div>
+            </div>
+
+            <div class="album-feature-copy">
+              <p class="album-feature-date" data-feature-date>Archive ready</p>
+              <h3 class="album-feature-caption" data-feature-caption>Choose a photo, add a caption, and save it.</h3>
+              <p class="album-feature-description" data-feature-description>
+                The newest photograph becomes the featured view, and you can switch focus from the
+                wall below whenever you want.
+              </p>
+            </div>
           </div>
-          <div class="summary-item">
-            <span class="summary-label">Storage</span>
-            <strong>Saved locally in this browser, which keeps the flow fast on a fully static site.</strong>
-          </div>
-        </div>
+        </article>
       </section>
 
-      <section class="section shell photograph-layout" data-photo-app>
-        <aside data-reveal>
-          <article class="panel sticky-panel photo-composer">
-            <p class="panel-label">Uploader</p>
-            <h2>Add a photo in one smooth flow.</h2>
-            <p class="section-copy">
-              Choose the image, write the caption, set the date, and it drops into the album right
-              away.
-            </p>
+      <section class="section shell photo-lab">
+        <article class="panel photo-composer-card" id="share-a-view" data-reveal>
+          <p class="panel-kicker">Uploader</p>
+          <h2>Add a photo in one smooth flow.</h2>
+          <p class="section-copy">
+            Choose the image, write the caption, set the date, and it drops into the archive right
+            away.
+          </p>
 
-            <form class="photo-form" data-photo-form>
-              <label class="photo-dropzone" for="photo-upload" data-photo-dropzone>
-                <input
-                  class="photo-dropzone-input"
-                  id="photo-upload"
-                  name="photo"
-                  type="file"
-                  accept="image/*"
-                  data-photo-input
-                >
-                <span class="photo-dropzone-copy">
-                  <span class="photo-dropzone-title">Upload a photograph</span>
-                  <span class="photo-dropzone-meta">
-                    Click to browse or drag a photo here. Images are prepared for faster local
-                    storage.
-                  </span>
+          <form class="photo-form" data-photo-form>
+            <label class="photo-dropzone" for="photo-upload" data-photo-dropzone>
+              <input
+                class="photo-dropzone-input"
+                id="photo-upload"
+                name="photo"
+                type="file"
+                accept="image/*"
+                data-photo-input
+              >
+              <span class="photo-dropzone-copy">
+                <span class="photo-dropzone-title">Upload a photograph</span>
+                <span class="photo-dropzone-meta">
+                  Click to browse or drag a photo here. Images are prepared for faster local storage.
                 </span>
+              </span>
+            </label>
+
+            <div class="photo-preview">
+              <img class="photo-preview-image" data-photo-preview-image alt="" hidden>
+              <div class="photo-preview-placeholder" data-photo-preview-placeholder>
+                <p>No photo selected yet.</p>
+                <p>Your preview shows up here before you save it to the archive.</p>
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <label class="field">
+                <span>Caption</span>
+                <textarea
+                  name="caption"
+                  rows="3"
+                  maxlength="180"
+                  placeholder="Add a short caption so the archive feels easy to browse."
+                  data-photo-caption
+                ></textarea>
               </label>
 
-              <div class="photo-preview" data-photo-preview>
-                <img class="photo-preview-image" data-photo-preview-image alt="" hidden>
-                <div class="photo-preview-placeholder" data-photo-preview-placeholder>
-                  <p>No photo selected yet.</p>
-                  <p>Your preview shows up here before you save it to the album.</p>
-                </div>
-              </div>
-
-              <div class="field-grid">
-                <label class="field">
-                  <span>Caption</span>
-                  <textarea
-                    name="caption"
-                    rows="3"
-                    maxlength="180"
-                    placeholder="Add a short caption so the album feels easy to browse."
-                    data-photo-caption
-                  ></textarea>
-                </label>
-
-                <label class="field">
-                  <span>Date</span>
-                  <input name="date" type="date" data-photo-date>
-                </label>
-              </div>
-
-              <p class="field-help">Tip: a clear caption and date make the album much easier to revisit.</p>
-
-              <div class="photo-form-actions">
-                <button class="button button-primary" type="submit">Add to album</button>
-                <button class="button button-secondary" type="button" data-photo-reset>Clear</button>
-              </div>
-
-              <p class="photo-status" data-photo-status aria-live="polite">
-                Photos stay on this device and in this browser.
-              </p>
-            </form>
-          </article>
-        </aside>
-
-        <div class="photograph-album-stack">
-          <article class="panel album-stage" data-reveal>
-            <div class="album-stage-head">
-              <div>
-                <p class="panel-label">Album view</p>
-                <h2>Browse the collection without losing the details.</h2>
-              </div>
-
-              <div class="album-count" aria-label="Saved photo count">
-                <span class="album-count-number" data-photo-count>0</span>
-                <span class="album-count-label">saved</span>
-              </div>
+              <label class="field">
+                <span>Date</span>
+                <input name="date" type="date" data-photo-date>
+              </label>
             </div>
 
-            <div class="album-feature is-empty" data-photo-feature>
-              <div class="album-feature-media">
-                <img class="album-feature-image" data-feature-image alt="" hidden>
-                <div class="album-feature-placeholder" data-feature-placeholder>
-                  <p>Nothing in the album yet.</p>
-                  <p>Upload your first photograph and it will appear here automatically.</p>
-                </div>
-              </div>
+            <p class="field-help">Tip: a clear caption and date make the archive much easier to revisit.</p>
 
-              <div class="album-feature-copy">
-                <p class="album-feature-date" data-feature-date>Album ready</p>
-                <h3 class="album-feature-caption" data-feature-caption>
-                  Choose a photo, add a caption, and save it.
-                </h3>
-                <p class="album-feature-description" data-feature-description>
-                  The newest photo becomes the featured view, and you can switch focus from the wall
-                  below at any time.
-                </p>
-              </div>
+            <div class="photo-form-actions">
+              <button class="button button-primary" type="submit">Add to archive</button>
+              <button class="button button-secondary" type="button" data-photo-reset>Clear</button>
             </div>
+
+            <p class="photo-status" data-photo-status aria-live="polite">
+              Photos stay on this device and in this browser.
+            </p>
+          </form>
+        </article>
+
+        <article class="panel album-grid-panel" id="photo-wall" data-reveal>
+          <div class="album-grid-heading">
+            <p class="eyebrow">Archive wall</p>
+            <h2>Tap any saved card to feature it above.</h2>
+            <p class="section-copy">
+              Each card keeps the image, caption, and date together. If you want to clean things up,
+              removing a photograph is built in too.
+            </p>
+          </div>
+
+          <div class="album-grid" data-photo-gallery></div>
+        </article>
+      </section>
+
+      <section class="section shell">
+        <div class="photo-notes">
+          <article class="photo-note" data-reveal>
+            <p class="panel-kicker">Local only</p>
+            <h3>No backend required.</h3>
+            <p>The archive persists in this browser with localStorage, so the flow stays fast and private.</p>
           </article>
 
-          <article class="panel album-grid-panel" data-reveal>
-            <div class="section-heading album-grid-heading">
-              <div>
-                <p class="eyebrow">Photo wall</p>
-                <h2>Tap any saved card to feature it above.</h2>
-              </div>
-              <p class="section-copy">
-                Each card keeps the image, caption, and date together. If you want to clean things
-                up, removing a photo is built in too.
-              </p>
-            </div>
+          <article class="photo-note" data-reveal>
+            <p class="panel-kicker">Prepared uploads</p>
+            <h3>Images are resized before save.</h3>
+            <p>That keeps the archive lighter and helps the local experience stay responsive over time.</p>
+          </article>
 
-            <div class="album-grid" data-photo-gallery></div>
+          <article class="photo-note" data-reveal>
+            <p class="panel-kicker">Featured view</p>
+            <h3>The wall stays interactive.</h3>
+            <p>Any saved card can become the featured photograph, so the route feels more like a gallery than a file list.</p>
           </article>
         </div>
       </section>
@@ -193,12 +207,20 @@
 
     <footer class="site-footer">
       <div class="shell footer-inner">
-        <a class="footer-brand" href="/">
-          <img class="footer-logo" src="/assets/logo.svg" alt="" aria-hidden="true">
-          <span>tkh.dev</span>
-        </a>
-        <p>Photograph section with local uploads, captions, dates, and a built-in album view.</p>
-        <p>&copy; <span data-year></span> Timothy Hughes</p>
+        <div class="footer-copy">
+          <a class="footer-brand" href="/">
+            <img class="footer-logo" src="/assets/logo-red.png" alt="" aria-hidden="true">
+            <span>tkh.dev</span>
+          </a>
+          <p>Photography route with uploads, captions, dates, and a local featured-image archive.</p>
+          <p>&copy; <span data-year></span> Timothy Hughes</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/tkhughes" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/tim-k-hughes" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://github.com/tim-k-hughes/tkh.dev" target="_blank" rel="noreferrer">Source</a>
+        </div>
       </div>
     </footer>
   </body>
